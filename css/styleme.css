@@ -12,3 +12,12 @@ body{
 p q{
     color : palegoldenrod;
 }
+
+
+#movies li a{
+    text-decoration-line: none;
+}
+
+#movies li a:hover{
+    text-decoration-line: underline;
+}
