@@ -1,0 +1,14 @@
+h1, h2{
+    color : skyblue;
+}
+body{ 
+    background-color: slategray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+p q{
+    color : palegoldenrod;
+}
