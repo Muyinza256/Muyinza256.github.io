@@ -5,8 +5,7 @@ body{
     background-color: slategray;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-style: italic;
+    font-weight: bold;    
 }
 
 p q{
@@ -16,8 +15,17 @@ p q{
 
 #movies li a{
     text-decoration-line: none;
+    color: maroon;
 }
 
 #movies li a:hover{
     text-decoration-line: underline;
+}
+
+#movies li dl dt{
+    color : yellow;
+}
+
+p::first-letter{
+    font-size: 1.5em;
 }
