@@ -1,0 +1,38 @@
+.main{
+    margin-top: 40px;
+    font-weight: bold;
+}
+.header{
+    left:25px;
+    position:relative;
+    top:68px;
+}
+.content-area{
+    top:70px;
+    width:650px;
+    left:20%;
+    position:relative;
+    box-shadow: 2px 2px #888888;
+    border-radius: 10pt;
+    background-color: lightblue;
+    height: 300px;
+}
+.content-area p{
+    height: 21px;
+}
+.column-one{
+    float: left;
+    width: 20%;
+    padding-left:100px;
+}
+.column-two{
+    float:left;
+}
+input[type="submit"]
+{
+    background-color:lightcoral;
+    font-weight: bold;    
+}
+.redText{
+    color:red;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New User Sign up</title>
+        <meta charset="utf-8"/>
+        <link href="css/signupform.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="content-area">
+                <form>
+                    <div class="column-one">
+                        <p><label>Name : </label></p>
+                        <p><label>Gender : </label></p>
+                        <p><label>Age : </label></p>
+                        <p><label>Personality type : </label></p>
+                        <p><label>Favourite OS : </label></p>
+                        <p><label>Seeking Age : </label></p>
+                        <br/>
+                        <p><input type="submit" value="Sign Up"></p>
+                    </div>
+                    <div class="column-two">
+                        <p><input type="text" id="name" name="name" maxlength="16"/></p>
+                        <p>
+                            <label><input type="radio" name="Gender" value="Male"/>Male</label>
+                            <label><input type="radio" name="Gender" value="Female" checked/>Female</label>
+                        </p>
+                        <p><input type="text" name="age" maxlength="2"/></p>
+                        <p><input type="text" name="personalityType" maxlength="4"/>(<span class="redText">Don't type your type</span>)</p>
+                        <p>
+                            <select name="favoriteOS">
+                                <option selected value="Windows">Windows</option>
+                                <option value="Mac OS X">Mac OS X</option>
+                                <option value="Linux">Linux</option>
+                            </select>
+                        </p>
+                        <p><input type="number" name="seekingAge"/> to <input type="number" name="seekingAge"/></p>
+                    </div>                    
+                </form>
+            <div>
+        </div>
+    </body>
+</html>
