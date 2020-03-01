@@ -1,0 +1,41 @@
+1. Can post requests be bookmarked? What are the problems?
+A post request can be bookmarked but since bookmarks keep only the url the submitted data will be lost.
+
+2. What is the purpose of request dispatching?
+The purpose of request dispatching is to forward requests to other resources in the servlet context.
+
+3. What is the difference between redirect and request dispatch?
+A redirect is a sends a request to an external resource outside the context of the current server while request dispatch sends requests to an internal resource
+or a resource with in the same server container.
+
+4. What is an attribute ?
+An attribute is a name value pair object bound into the three servlet API objects.
+
+5. What is the difference between attributes and parameters?
+Parameters can be set by client requests while attributes are entirely set from server side.
+
+6. What are dangers of using attributes?
+Context scope and session scope attributes are not thread safe.
+
+7. What does it mean to say that http is stateless? Give an example of a stateful protocol.
+http is stateless because you can't store anything in its state. examples of stateful protocols include FTP(File Transfer Protocol)
+
+8. Give 5 different methods for maintaining state information (count each attribute scope as one method).
+Request scope
+Application scope
+Session scope
+Cookies
+Hidden fields
+
+9. How long does a session last?
+A sessions lifetime is determined by a configuration either in the web.xml or manually in code
+
+10. What is a cookie, and how long does a cookie last?
+A cookie is a message passed from a server to a web browser. On subsquent requests the browser sends the information in the cookie back to the server.
+ A cookie's valid lifetime is determined by the server that sent it.
+
+11. What is the purpose of URL rewriting?
+Rewriting URLs helps make them shorter and easier to read and remember.
+
+12. Why does the request attribute report ‘null’ for the maintaining state demo?
+The request attribute is set to null because it's scope is only for a single request. So for another request, its value would be null.
