@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Retrieve Grade
+        </title>
+    </head>
+    <body>
+        <h1>Retrieve your grade</h1>
+        <form action="http://mumstudents.org/params.php">
+            <p><label>Name : </label><input type="text" name="name"/></p>
+            <p><label>Student ID :</label><input type="text" name="studentid"/></p>
+            <p>
+                <label><input type = "radio" name="entry" value="Nov" checked>Nov</label>
+                <label><input type = "radio" name="entry" value="Aug">Aug</label>
+                <label><input type = "radio" name="entry" value="May">May</label>
+                <label><input type = "radio" name="entry" value="Feb">Feb</label>
+            </p>
+            <p>
+                <input type="checkbox" id="confirm" name="confirm" value="confirm">
+                <label for="confirm">Am not lying and this is who I am and am only interested in my grade.</label><br>
+            </p>
+            <p><input type = "submit" value="Get grade!"></p>
+        </form>        
+    </body>
+</html>
