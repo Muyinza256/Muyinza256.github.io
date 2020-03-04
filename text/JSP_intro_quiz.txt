@@ -1,0 +1,58 @@
+1. What is the main value of Java Server Pages?
+To separate display from processing
+
+2. How are JSP pages related to servlets?
+They have the same lifecycle as a servlet with an additional step of compiling to become a servlet.
+
+3. How are JSP pages related to HTML?
+A jsp page has the ability to have HTML elements without having to use a java printer. A jsp page can have both HTML elements and jsp tags for java code
+
+
+4. Give an example of a JSP scriptlet and show how it will look in the JSP servlet .
+<% double num = Math.random(); %>
+public void _jspService(HttpServletRequest request, HttpServletResponse response)throws java.io.IOException, ServletException 
+{
+	double num = Math.random();
+}
+
+
+5. Give an example of a JSP declaration and show how it will look in the JSP servlet.
+<%! int count = 0; %>
+public void _jspService(HttpServletRequest request, HttpServletResponse response)throws java.io.IOException, ServletException 
+{
+	int count = 0;
+}
+
+
+6. Give an example of a JSP comment and show how it will look in the JSP servlet.
+<%-- jsp comment --%>
+public void _jspService(HttpServletRequest request, HttpServletResponse response)throws java.io.IOException, ServletException 
+{
+	//jsp comment
+}
+
+7. Give an example of a JSP expression and show how it will look in the JSP servlet.
+<%= count++ %>
+public void _jspService(HttpServletRequest request, HttpServletResponse response)throws java.io.IOException, ServletException 
+{
+	out.println(count++);
+}
+
+8. Give an example of a JSP directive and show how it will look in the JSP servlet.
+<%@page import="java.util.*" %>
+import java.util.*;
+
+9. Explain how an EL expression is evaluated.
+The code in an EL expression is evaluated as follows:
+check the page scope for an attribute named "something"
+check the request scope for an attribute named "something"
+check the session scope for an attribute named "something"
+check the application scope for an attribute named "something"
+After the variable is found, it is written out to the HTML page at that exact location.
+
+10. Explain how servlet attributes are involved in EL expressions.
+Servlet attributes can be accessed in EL expressions depending on which ever scope they were written. The container checks in the following scopes
+Page,request,session and application.
+
+11. Explain how servlets and JSPs use request dispatch to interact.
+Servlets can use the request dispatcher to forward requests to jsps. When a servlet calls the dispatch method, the servlet container calls the service method of the jsp page with the request and response objects from the servlet.
