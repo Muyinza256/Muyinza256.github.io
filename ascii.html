@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>ASCII</title>
+        <link rel="stylesheet" type="text/css" href="css/ascii.css">
+        <script src="js/animations.js"></script>
+        <script src="js/myanimations.js"></script>
+    </head>
+    <body>
+        <h1>CSE 190 M ASCII Animation Viewer</h1>
+        <div>
+            <textarea id="mainTextArea" rows="4" cols="50"></textarea>    
+        </div>
+        <div id="fieldSetDiv">
+            <fieldset class="inline">
+                <legend>Play Controls:</legend>
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+            </fieldset>
+            <fieldset class="inline">
+                <legend>Animation:</legend>
+                <select id="animationSelect">
+                    <option value="Blank">Blank</option>
+                    <option value="Custom">Custom</option>
+                    <option value="Exercise">Exercise</option>
+                    <option value="Juggler">Juggler</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Dive">Dive</option>                    
+                </select>
+            </fieldset>
+            <fieldset class="inline">
+                <legend>Size:</legend>
+                <select id="fontSizeSelect">
+                    <option value="7pt">Tiny</option>
+                    <option value="10pt">Small</option>
+                    <option value="12pt">Medium</option>
+                    <option value="16pt">Large</option>
+                    <option value="24pt">Extra Large</option>
+                    <option value="32pt">XXL</option>
+                </select>
+            </fieldset>
+            <fieldset class="inline">
+                <legend>Speed:</legend>
+                <label><input type="radio"> Turbo</label>
+            </fieldset>
+        </div>
+    </body>
+</html>
