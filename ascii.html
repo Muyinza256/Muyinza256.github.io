@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>ASCII</title>
         <link rel="stylesheet" type="text/css" href="css/ascii.css">
@@ -32,7 +33,7 @@
                 <select id="fontSizeSelect">
                     <option value="7pt">Tiny</option>
                     <option value="10pt">Small</option>
-                    <option value="12pt">Medium</option>
+                    <option value="12pt" selected>Medium</option>
                     <option value="16pt">Large</option>
                     <option value="24pt">Extra Large</option>
                     <option value="32pt">XXL</option>
@@ -40,8 +41,15 @@
             </fieldset>
             <fieldset class="inline">
                 <legend>Speed:</legend>
-                <label><input type="radio"> Turbo</label>
+                <label><input type="checkbox" id="turboCheckbox"> Turbo</label>
             </fieldset>
+        </div>
+        <div class="validators">
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmuyinza256.github.io%2Fpie.html"> <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/></a>
+            <br/>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmuyinza256.github.io%2Fcss%2Frecipe.css"> <img src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png" alt="css validator"/></a>
+            <br/>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmuyinza256.github.io%2Fcss%2Frecipe.css"> <img src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png" alt="js validator"/></a>
         </div>
     </body>
 </html>
