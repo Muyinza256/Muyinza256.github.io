@@ -1,0 +1,82 @@
+1. Determine what this Javascript code will print out (without running it)
+10 8 8 9 10 1
+
+2. What is the difference between a method and function?
+A function can be used as a parameter or an argument while a method can't.
+
+3. What does 'this' refer to when used in a Java method?
+this in java refers to the current object of the current class
+
+4. What does 'this' refer to when used in a JavaScript method?
+this in javascript refers to the nearest encapsulating context, it can be an object or the global context.
+
+5. What does 'this' refer to when used in a JavaScript constructor function?
+this points to the newly created object
+
+6. Assume object x is the prototype for object y in Javascript. Object x has a method f( ) containing keyword 'this'.
+ When f is called by x.f( ), what does 'this' refer to?
+It refers to object x.
+
+7. What is a free variable in JavaScript?
+A free variable is one that is used in function but isn't an argument.
+
+8. Create an object that has properties with name = "fred" and major="music" and a property that is a function
+that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+var objPrototype = {
+	name:"fred",
+	major:"music",
+	fnc : function(a,b){
+			if(a == b)
+			{
+				return a * a * b *b;
+			}
+			else if(a < b)
+			{
+				return a;
+			}
+			else
+			{
+				return b;
+			}
+		}
+}
+var obj = Object.create(objPrototype);
+
+9. Write Javascript code for creating three Employee objects using the "new" keyword and a constructor function.
+ Employee objects have the following fields: name, salary, position.
+function Employee(name,salary,position)
+{
+	this.name = name;
+	this.salary = salary;
+	this.position = position;
+}
+
+var employee1 = new Employee("Danny",1000,"Programmer");
+var employee2 = new Employee("Muyinza",1000,"Tester");
+var employee3 = new Employee("Kiggundu",1000,"BA");
+
+10. Write a Javascript function that takes any number of input arguments and returns the product of the arguments.
+function multipy(){
+	var result = 1;
+	for(int i = 0;i < arguments.length;i++)
+	{
+		result = result * arguments[i];
+	}
+	return result;
+}
+
+11. Write an arrow function that returns the maximum of its three input arguments.
+var greaterOf3 = (num1,num2,num3) => {
+			if(num1 >= num2 && num1 >= num3)	
+			{
+				return num1;
+			}
+			else if(num2 >= num1 && num3 >= num2)
+			{
+				return num2;
+			}
+			else
+			{
+				return num3;	
+			}
+		};

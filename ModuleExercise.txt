@@ -1,0 +1,69 @@
+1. Determine what this Javascript code will print out (without running it):
+10 8 8 9 10 1
+
+2. Define Global Scope and Local Scope in Javascript.
+Global scope means the value assigned to a variable can be accessed from anywhere in the application while Local scope means the variable assigned to a variable can only be accessed in the context it has been declared or assigned
+
+3. Consider the following structure of Javascript code:
+(a) Do statements in Scope A have access to variables defined in Scope B and C?
+No
+
+(b) Do statements in Scope B have access to variables defined in Scope A?
+Yes
+
+(c) Do statements in Scope B have access to variables defined in Scope C?
+No
+
+(d) Do statements in Scope C have access to variables defined in Scope A?
+Yes
+
+(e) Do statements in Scope C have access to variables defined in Scope B?
+Yes
+
+4. What will be printed by the following (answer without running it)?
+81 25
+
+5. What will the alert print out? (Answer without running the code. Remember ‘hoisting’.)?
+1
+
+6. Modify the above module to define a count object with two methods: add( ) and reset( ). The count.add( ) method adds one to the counter (as above). The count.reset( ) method sets the counter to 0.
+var add = (function () {
+	 var counter = 0; 
+	 return function () {
+		 return counter += 1; 
+	 }
+ })();
+var prototype = {
+	counter: 0,
+	add: function (){
+			return this.counter += 1;
+		},
+	reset: function(){
+			return this.counter = 0;
+		}
+}
+var obj = Object.create(prototype);
+
+7. In the definition of add( ) shown in question 6, identify the "free" variable. In the context of a function closure, what is a "free" variable?
+counter is a free variable
+
+8. The add( ) function defined in question 6 always adds 1 to the counter each time it is called. Write a definition of a function make_adder(inc)
+var prototype = {
+	counter: 0,
+	add: function (){
+			return this.counter += 1;
+		},
+	reset: function(){
+			return this.counter = 0;
+		}
+	make_adder: function(inc){
+		return function(){
+			return this.counter += inc;
+		}
+	}
+}
+
+9. Suppose you are given a file of Javascript code containing a list of many function and variable declarations. All of these function and variable names will be added to the Global Javascript namespace. What simple modification to the Javascript file can remove all the names from the Global namespace?
+Wrap that code in an anonymous function and use closures for the functions.
+
+10. 
