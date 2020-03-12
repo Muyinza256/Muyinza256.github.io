@@ -66,4 +66,111 @@ var prototype = {
 9. Suppose you are given a file of Javascript code containing a list of many function and variable declarations. All of these function and variable names will be added to the Global Javascript namespace. What simple modification to the Javascript file can remove all the names from the Global namespace?
 Wrap that code in an anonymous function and use closures for the functions.
 
-10. 
+10. Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object with the following fields and methods:
+var module = (function () {
+	let name;
+	let age;
+	let salary;
+
+	let getName = function (){
+			return name;
+		};
+	let getSalary = function (){
+			return salary;
+		};
+	let getAge = function (){
+			return age;
+		};
+	let setName : function (n){
+				name = n;
+			};
+	let setSalary : function (s){
+				salary = s;
+			};
+	let setAge : function (a){
+				age = a;
+			};
+	let increaseSalary : function(percentage){
+				return getSalary() * ((100+percentage)/100);
+			};
+	let increaseAge : function(){
+				return getAge() + 1;
+			}
+	return {
+		setName : setName,		
+		setSalary : setSalary,
+		setAge:setAge,
+		increaseSalary:increaseSalary,
+		increaseAge:increaseAge
+	}
+})();
+
+11. Rewrite your answer to Question 10 using the Anonymous Object Literal Return Pattern.
+var module = (function () {
+	let name;
+	let age;
+	let salary;
+
+	let getName = function (){
+			return name;
+		};
+	let getSalary = function (){
+			return salary;
+		};
+	let getAge = function (){
+			return age;
+		};
+	return {
+		setName : function (n){
+				name = n;
+			},		
+		setSalary : function (s){
+				salary = s;
+			},
+		setAge:function (a){
+				age = a;
+			},
+		increaseSalary:function(percentage){
+				return getSalary() * ((100+percentage)/100);
+			},
+		increaseAge:function(){
+				return getAge() + 1;
+			}
+	}
+})();
+
+12. Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
+var module = (function () {
+	let name;
+	let age;
+	let salary;
+
+	let getName = function (){
+			return name;
+		};
+	let getSalary = function (){
+			return salary;
+		};
+	let getAge = function (){
+			return age;
+		};
+	let obj = {};
+	obj.setName = function (n){
+				name = n;
+			};
+	obj.setSalary = function (s){
+				salary = s;
+			};
+	obj.setAge = function (a){
+				age = a;
+			};
+	obj.increaseSalary = function(percentage){
+				return getSalary() * ((100+percentage)/100);
+			};
+	obj.increaseAge = function(){
+				return getAge() + 1;
+			}
+	return obj;
+})();
+
+13. Write a few Javascript instructions to extend the Module of Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).
