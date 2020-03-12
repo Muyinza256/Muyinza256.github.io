@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 var currentAnimation = "Blank";
 var currentFontSize = "12pt";
@@ -7,7 +7,7 @@ var animationInterval;
 var animationSpeed = 250;
 var isAnimationRunning = false;
 
-window.onload = function(){
+window.onload = function () {
     document.getElementById("animationSelect").onchange = onAnimationChange;
     document.getElementById("fontSizeSelect").onchange = onFontSizeChange;
     document.getElementById("start").onclick = onStartBtnClick;
@@ -33,7 +33,8 @@ function onClickTurboBtn()
     }
 }
 
-function onAnimationChange(){        
+function onAnimationChange()
+{        
     selectedOption = document.getElementById("animationSelect").value;
     changeAnimation(selectedOption);
 }
@@ -103,7 +104,8 @@ function startAnimation()
     var anime = getNextAnimation();
     changeAnimation(anime);
     isAnimationRunning = true;
-    (function(){
+    (function ()
+    {
         document.getElementById("start").disabled = true;
         document.getElementById("animationSelect").disabled = true;
     })();
