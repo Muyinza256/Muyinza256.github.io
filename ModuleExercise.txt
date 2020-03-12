@@ -174,3 +174,17 @@ var module = (function () {
 })();
 
 13. Write a few Javascript instructions to extend the Module of Question 10 to have a public address field and public methods setAddress(newAddress) and getAddress( ).
+module.address= "";
+module.setAddress = (a)=>{this.address = a;};
+module.getAddress = ()=>{return this.address;};
+
+14. What is the output of the following code?
+Error: Hattori
+
+15. What is the output of the following code?
+Success: Hattori
+Error: Yoshi
+
+16. What is the output of the following code?
+success
+error
