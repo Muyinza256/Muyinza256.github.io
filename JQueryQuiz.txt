@@ -1,0 +1,9 @@
+1. In jQuery terminology, what is the difference between the “jQuery function” and the “jQuery object”?
+jQuery function is used to select elements from an HTML page.
+while a jQuery object is a wrapping object to an html element
+
+2. Write jQuery code to find all h1 elements that are children of a div element and make their background color red.
+$("div").find("h1").css("background-color:red");
+
+3. Use a jQuery method to insert the text "YES!" at the end of the <p> element.
+$("p").append(" YES!");
