@@ -1,0 +1,13 @@
+1. Which, if any, of the following 3 code fragments are equivalent? Explain why they are different, if they are. 
+Explain why they can have different parameters and be equivalent, if they are equivalent.
+They are all equivalent because fragment 1 takes two arguments (idx and e) which represent the index of the element and the element its self.
+It then uses the element argument to change the css of that element.
+The second and third fragment achieves the same effect because it uses this to point to the specific element
+
+2. Write a jQuery expression to find all divs on a page that include an unordered list in them, and make their text color be blue.
+$("div").find("ul").css("color:blue");
+
+3. Write jQuery code to append the following div element (and all of its contents) dynamically to the body element.
+var currHtml = $("body").html();
+currHtml = currHtml + "";
+$("body").html(currHtml + "<div><h1>JQuery Core</h1></div>");

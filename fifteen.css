@@ -1,0 +1,117 @@
+body, button {
+    font-family: cursive;
+	font-size: 14pt;
+	text-align: center;
+}
+
+#puzzlearea {
+    font-size: 40pt;
+	width: 400px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.tile {
+    width:90px;
+    height:90px;
+    float: left;
+    text-align: center;
+    border: 5px black solid;
+    vertical-align: middle;
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+}
+
+button, select {
+    display: block;
+    margin: 10px auto;
+}
+
+img {
+    height: 30px;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    border:0;
+}
+
+.bckground { background: url("background.jpg"); }
+
+#one      { background-position: 0      0;      }
+#two      { background-position: -100px 0;      }
+#three    { background-position: -200px 0;      }
+#four     { background-position: -300px 0;      }
+#five     { background-position: 0      -100px; }
+#six      { background-position: -100px -100px; }
+#seven    { background-position: -200px -100px; }
+#eight    { background-position: -300px -100px; }
+#nine     { background-position: 0      -200px; }
+#ten      { background-position: -100px -200px; }
+#eleven   { background-position: -200px -200px; }
+#twelve   { background-position: -300px -200px; }
+#thirteen { background-position: 0      -300px; }
+#fourteen { background-position: -100px -300px; }
+#fifteen  { background-position: -200px -300px; }
+#sixteen  { border: 2px solid white !important; }
+
+.clickable {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.clickable:hover {
+    border-color: red !important;
+    text-decoration: underline !important;
+    color: red;
+    cursor: pointer;
+}
+
+/* grading styles -- for TAs only; not required by students */
+#gradingarea {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	z-index: 999999;
+}
+
+.animate-up {
+    -webkit-transform: translate(0, -100px);
+    -moz-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    transform: translate(0, -100px);
+}
+
+.animate-down {
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    -ms-transform: translate(0, 100px);
+    -o-transform: translate(0, 100px);
+    transform: translate(0, 100px);
+}
+
+.animate-left {
+    -webkit-transform: translate(-100px, 0);
+    -moz-transform: translate(-100px, 0);
+    -ms-transform: translate(-100px, 0);
+    -o-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+}
+
+.animate-right {
+    -webkit-transform: translate(100px, 0);
+    -moz-transform: translate(100px, 0);
+    -ms-transform: translate(100px, 0);
+    -o-transform: translate(100px, 0);
+    transform: translate(100px, 0);
+}
