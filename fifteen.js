@@ -1,6 +1,6 @@
 $(document).ready(function(){
     initializeGame();
-    $('#shufflebutton').click(function(){
+    $("#shufflebutton").click(function(){
         shuffleBoard();
     });
 });
@@ -40,7 +40,7 @@ var movement = [
     [1, 0, 0, 1]  //15: sixteen
 ];
 
-function initializeGame() {    
+function initializeGame() {
     for (var i = 0; i < ids.length - 1; i++) {        
         $("#"+ids[i]).addClass("tile bckground");
     }
