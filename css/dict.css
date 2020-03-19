@@ -1,0 +1,21 @@
+#headingArea{
+    background-color: silver;
+    position:fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+}
+#searchArea{    
+    background-color: lightgrey;
+    position:fixed;
+     top: 60px;
+     left: 0;
+     width: 100%;
+}
+#resultsArea
+{    
+    position:fixed;
+     top: 100px;
+     left: 0;
+     width: 100%;
+}
